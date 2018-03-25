@@ -1,0 +1,11 @@
+[Unit]
+Description=Portage SquashFS
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/squash-portage start
+ExecStop=/usr/local/bin/squash-portage stop
+
+[Install]
+WantedBy=multi-user.target
